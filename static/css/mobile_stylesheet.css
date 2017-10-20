@@ -1,0 +1,649 @@
+
+/* Sign in page */
+
+
+
+/* iPhone 5 (portrait)----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : portrait) {
+        body {
+            width: 110%;
+
+            background: #FFFFFF url('/static/images/signin.JPG') no-repeat fixed top center;
+            background-size: cover;
+            -webkit-background-size: cover; /* safari may need this */
+            font-size: 20px;
+            line-height: 1.52947;
+            font-weight: 400;
+            letter-spacing: -0.021em;
+            font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+            color: #333333;
+            font-style: normal;
+            height: 1400px;
+        }
+
+        #loginForm {
+            padding-top: 99px;
+            padding-left: 0px;
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+            border-bottom-width: 0px;
+            position:relative;
+        }
+
+        .form-control{
+            height: 51px;
+            font-size: 18px;
+            line-height: 1.52947;
+            font-weight: 400;
+            letter-spacing: -0.021em;
+            font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+            border-color: #b9b9b9;
+            font-style: normal;
+            font-synthesis: none;
+            -moz-font-feature-settings: 'kern';
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            direction: ltr;
+            text-align: left;
+            background: transparent;
+            outline: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            position: relative;
+        }
+
+        #email {
+            margin-top: 209px;
+            width: 353px;
+            -moz-border-radius: 0px;
+            -webkit-border-radius: 9px 8px 0px 0px;
+            border-bottom:1px solid #b8b8b8;
+        }
+
+        #passwd {
+            margin-top: -1px;
+            width: 353px;
+            -moz-border-radius: 0px;
+            -webkit-border-radius: 0px 0px 10px 10px;
+            border-top:1px solid rgba(255, 248, 248, 0);
+        }
+
+        #login{
+            width: 33px;
+            height: 33px;
+            margin-top: -90px;
+            margin-left: 311px;
+            background: #FFFFFF url('/static/images/disabled-button.png') no-repeat fixed top center;
+
+        }
+
+        input:focus {
+            border-color: #2283f7 !important;
+            text-decoration: none !important;
+        }
+
+        input::-webkit-input-placeholder { /* WebKit browsers */
+            line-height: 1.5em;
+            padding-left: 5px;
+        }
+
+        .checkbox{
+            font-size: 20px;
+            line-height: 2.52947;
+            text-shadow: 1px 1px rgba(184, 184, 184, 0.23);
+            margin-left: 96px;
+            margin-top: 21px;
+            text-decoration: none !important;
+            opacity: 0.8;
+            background:transparent;
+            border:0px;
+        }
+
+        .error {
+            margin-top: 30px;
+        }
+}
+
+
+
+/*  iPhone 6 */
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px)
+and (orientation : portrait) {
+        body {
+            background: #FFFFFF url('/static/images/signin.JPG') no-repeat fixed top center;
+            background-size: cover;
+            -webkit-background-size: cover; /* safari may need this */
+            font-size: 20px;
+            line-height: 1.52947;
+            font-weight: 400;
+            letter-spacing: -0.021em;
+            font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+            color: #333333;
+            font-style: normal;
+            height: 1400px;
+        }
+
+        #loginForm {
+            padding-top: 99px;
+            padding-left: 3.2px;
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+            border-bottom-width: 0px;
+            position:relative;
+        }
+
+        .form-control{
+            height: 51px;
+            font-size: 18px;
+            line-height: 1.52947;
+            font-weight: 400;
+            letter-spacing: -0.021em;
+            font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+            border-color: #b9b9b9;
+            font-style: normal;
+            font-synthesis: none;
+            -moz-font-feature-settings: 'kern';
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            direction: ltr;
+            text-align: left;
+            background: transparent;
+            outline: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            position: relative;
+        }
+
+        #email {
+            margin-top: 209px;
+            width: 353px;
+            -moz-border-radius: 0px;
+            -webkit-border-radius: 9px 8px 0px 0px;
+            border-bottom:1px solid #b8b8b8;
+        }
+
+        #passwd {
+            margin-top: -1px;
+            width: 353px;
+            -moz-border-radius: 0px;
+            -webkit-border-radius: 0px 0px 10px 10px;
+            border-top:1px solid rgba(255, 248, 248, 0);
+        }
+
+        #login{
+            width: 33px;
+            height: 33px;
+            margin-top: -90px;
+            margin-left: 311px;
+            background: #FFFFFF url('/static/images/disabled-button.png') no-repeat fixed top center;
+
+        }
+
+        input:focus {
+            border-color: #2283f7 !important;
+            text-decoration: none !important;
+        }
+
+        input::-webkit-input-placeholder { /* WebKit browsers */
+            line-height: 1.5em;
+            padding-left: 5px;
+        }
+
+        .checkbox{
+            font-size: 20px;
+            line-height: 2.52947;
+            text-shadow: 1px 1px rgba(184, 184, 184, 0.23);
+            margin-left: 96px;
+            margin-top: 21px;
+            text-decoration: none !important;
+            opacity: 0.8;
+            background:transparent;
+            border:0px;
+        }
+
+        .error {
+            margin-top: 30px;
+        }
+}
+
+
+/*  iPhone 6 Plus */
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px)
+and (orientation : portrait) {
+
+        body {
+            background: #FFFFFF url('/static/images/signin.JPG') no-repeat fixed top center;
+            background-size: cover;
+            -webkit-background-size: cover; /* safari may need this */
+            font-size: 20px;
+            line-height: 1.52947;
+            font-weight: 400;
+            letter-spacing: -0.021em;
+            font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+            color: #333333;
+            font-style: normal;
+            height: 1400px;
+        }
+
+        #loginForm {
+
+            padding-top: 109px;
+            position:relative;
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+            border-bottom-width: 0px;
+            padding-left: 4.3px;
+        }
+
+        .form-control{
+
+            height: 55.7px;
+            font-size: 18px;
+            line-height: 1.52947;
+            font-weight: 400;
+            letter-spacing: -0.021em;
+            font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+            border-color: #b9b9b9;
+            font-style: normal;
+            font-synthesis: none;
+            -moz-font-feature-settings: 'kern';
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            direction: ltr;
+            text-align: left;
+            background: transparent;
+            outline: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            position: relative;
+        }
+
+        #email {
+            color: white;
+            margin-top: 231px;
+            width: 389px;
+            -moz-border-radius: 0px;
+            -webkit-border-radius: 9px 8px 0px 0px;
+            border-bottom:1px solid #b8b8b8;
+        }
+
+        #passwd {
+            margin-top: -1px;
+            width: 389px;
+            -moz-border-radius: 0px;
+            -webkit-border-radius: 0px 0px 10px 10px;
+            border-top:1px solid rgba(255, 248, 248, 0);
+        }
+
+        #login{
+            width: 33px;
+            height: 33px;
+            margin-top: -90px;
+            margin-left: 350px;
+            background: #FFFFFF url('/static/images/disabled-button.png') no-repeat fixed top center;
+
+        }
+
+        input:focus {
+            border-color: #2283f7 !important;
+            text-decoration: none !important;
+        }
+
+        input::-webkit-input-placeholder { /* WebKit browsers */
+            line-height: 1.5em;
+            padding-left: 5px;
+        }
+
+        .checkbox{
+            font-size: 20px;
+            line-height: 2.52947;
+            text-shadow: 1px 1px rgba(184, 184, 184, 0.23);
+            margin-left: 106.9px;
+            margin-top: 28px;
+            text-decoration: none !important;
+            opacity: 0.8;
+            background:transparent;
+            border:0px;
+        }
+
+        .error {
+            margin-top: 30px;
+        }
+
+
+}
+
+
+
+/*  iPhone 6 landscape */
+@media only screen
+and (min-device-width : 414px)
+and (max-device-width : 736px)
+and (orientation : landscape) {
+            body {
+            background: #FFFFFF url('/static/images/signin.JPG') no-repeat fixed top center;
+            background-size: cover;
+            -webkit-background-size: cover; /* safari may need this */
+            font-size: 20px;
+            line-height: 1.52947;
+            font-weight: 400;
+            letter-spacing: -0.021em;
+            font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+            color: #333333;
+            font-style: normal;
+            height: 1400px;
+        }
+
+        #loginForm {
+            padding-top: 344.7px;
+            padding-left: 13.2px;
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+            border-bottom-width: 0px;
+            position:relative;
+        }
+
+        .form-control{
+            height: 89px;
+            font-size: 18px;
+            line-height: 1.52947;
+            font-weight: 400;
+            letter-spacing: -0.021em;
+            font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+            border-color: #b9b9b9;
+            font-style: normal;
+            font-synthesis: none;
+            -moz-font-feature-settings: 'kern';
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            direction: ltr;
+            text-align: left;
+            background: transparent;
+            outline: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            position: relative;
+        }
+
+        #email {
+            margin-top: 208px;
+            width: 625px;
+            -moz-border-radius: 0px;
+            -webkit-border-radius: 9px 8px 0px 0px;
+            border-bottom:1px solid #b8b8b8;
+        }
+
+        #passwd {
+            margin-top: -1px;
+            width: 625px;
+            -moz-border-radius: 0px;
+            -webkit-border-radius: 0px 0px 10px 10px;
+            border-top:1px solid rgba(255, 248, 248, 0);
+        }
+
+        #login{
+            width: 53px;
+            height: 53px;
+            margin-top: -120px;
+            margin-left: 561px;
+            background: #FFFFFF url('/static/images/disabled-button.png') no-repeat fixed top center;
+
+        }
+
+        input:focus {
+            border-color: #2283f7 !important;
+            text-decoration: none !important;
+        }
+
+        input::-webkit-input-placeholder { /* WebKit browsers */
+            line-height: 1.5em;
+            padding-left: 5px;
+        }
+
+        .checkbox{
+            margin-top: 52px;
+            font-size: 20px;
+            margin-left: 178px;
+            line-height: 2.52947;
+            text-shadow: 1px 1px rgba(184, 184, 184, 0.23);
+            text-decoration: none !important;
+            opacity: 0.1;
+            background:transparent;
+            border:0px;
+        }
+
+        .error {
+            margin-top: 30px;
+        }
+}
+
+
+/* iPad mini */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait)
+and (-webkit-min-device-pixel-ratio: 1)  {
+        body {
+            background: #FFFFFF url('/static/images/signin.JPG') no-repeat fixed top center;
+            background-size: cover;
+            -webkit-background-size: cover; /* safari may need this */
+            font-size: 20px;
+            line-height: 1.52947;
+            font-weight: 400;
+            letter-spacing: -0.021em;
+            font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+            color: #333333;
+            font-style: normal;
+            height: 2900px;
+        }
+
+        #loginForm {
+            padding-top: 413px;
+            padding-left: 14.3px;
+            position:relative;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+            border-bottom-width: 0px;
+        }
+
+        .form-control{
+            height: 102px;
+            font-size: 25px;
+            line-height: 1.52947;
+            font-weight: 400;
+            letter-spacing: -0.021em;
+            font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+            border-color: #b9b9b9;
+            font-style: normal;
+            font-synthesis: none;
+            -moz-font-feature-settings: 'kern';
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            direction: ltr;
+            text-align: left;
+            background: transparent;
+            outline: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            position: relative;
+        }
+
+        #email {
+            margin-top: 231px;
+            width: 725px;
+            -moz-border-radius: 0px;
+            -webkit-border-radius: 9px 8px 0px 0px;
+            border-bottom:1px solid #b8b8b8;
+        }
+
+        #passwd {
+            margin-top: -1px;
+            width: 725px;
+            -moz-border-radius: 0px;
+            -webkit-border-radius: 0px 0px 10px 10px;
+            border-top:1px solid rgba(255, 248, 248, 0);
+        }
+
+        #login{
+            width: 53px;
+            height: 53px;
+            margin-top: -130px;
+            margin-left: 650px;
+            background: #FFFFFF url('/static/images/disabled-button.png') no-repeat fixed top center;
+
+        }
+
+        input:focus {
+            border-color: #2283f7 !important;
+            text-decoration: none !important;
+        }
+
+        input::-webkit-input-placeholder { /* WebKit browsers */
+            line-height: 1.5em;
+            padding-left: 8px;
+        }
+
+        .checkbox{
+            margin-top: 28px;
+            margin-left: 106.9px;
+            width: 25px;
+            height: 25px;
+            font-size: 20px;
+            line-height: 2.52947;
+            text-shadow: 1px 1px rgba(184, 184, 184, 0.23);
+            text-decoration: none !important;
+            opacity: 0.8;
+            background:transparent;
+            border:0px;
+        }
+
+        .error {
+            margin-top: 30px;
+        }
+}
+
+
+/* iPad 12.5 */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)  {
+        body {
+            background: #FFFFFF url('/static/images/signin.JPG') no-repeat fixed top center;
+            background-size: cover;
+            -webkit-background-size: cover; /* safari may need this */
+            font-size: 20px;
+            line-height: 1.52947;
+            font-weight: 400;
+            letter-spacing: -0.021em;
+            font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+            color: #333333;
+            font-style: normal;
+            height: 2900px;
+        }
+
+        #loginForm {
+            padding-top: 413px;
+            padding-left: 14.3px;
+            position:relative;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+            border-bottom-width: 0px;
+        }
+
+        .form-control{
+            height: 102px;
+            font-size: 25px;
+            line-height: 1.52947;
+            font-weight: 400;
+            letter-spacing: -0.021em;
+            font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+            border-color: #b9b9b9;
+            font-style: normal;
+            font-synthesis: none;
+            -moz-font-feature-settings: 'kern';
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            direction: ltr;
+            text-align: left;
+            background: transparent;
+            outline: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            position: relative;
+        }
+
+        #email {
+            margin-top: 231px;
+            width: 725px;
+            -moz-border-radius: 0px;
+            -webkit-border-radius: 9px 8px 0px 0px;
+            border-bottom:1px solid #b8b8b8;
+        }
+
+        #passwd {
+            margin-top: -1px;
+            width: 725px;
+            -moz-border-radius: 0px;
+            -webkit-border-radius: 0px 0px 10px 10px;
+            border-top:1px solid rgba(255, 248, 248, 0);
+        }
+
+        #login{
+            width: 53px;
+            height: 53px;
+            margin-top: -130px;
+            margin-left: 650px;
+            background: #FFFFFF url('/static/images/disabled-button.png') no-repeat fixed top center;
+
+        }
+
+        input:focus {
+            border-color: #2283f7 !important;
+            text-decoration: none !important;
+        }
+
+        input::-webkit-input-placeholder { /* WebKit browsers */
+            line-height: 1.5em;
+            padding-left: 5px;
+        }
+
+        .checkbox{
+            margin-top: 28px;
+            margin-left: 106.9px;
+            width: 25px;
+            height: 25px;
+            font-size: 20px;
+            line-height: 2.52947;
+            text-shadow: 1px 1px rgba(184, 184, 184, 0.23);
+            text-decoration: none !important;
+            opacity: 0.8;
+            background:transparent;
+            border:0px;
+        }
+
+        .error {
+            margin-top: 30px;
+        }
+
+
+}

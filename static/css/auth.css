@@ -1,0 +1,70 @@
+
+/* Two Factor Auth*/
+
+
+body{
+    background: #FFFFFF url('/static/images/twofact.jpg') no-repeat fixed top center;
+    background-size: cover;
+    -webkit-background-size: cover; /* safari may need this */
+    font-size: 17px;
+    line-height: 1.52947;
+    font-weight: 400;
+    letter-spacing: -0.021em;
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    color: #363636;
+    font-style: normal;
+    height: 1400px;
+}
+
+#loginForm {
+    position:relative;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-width: 0px;
+    border-color: #b9b9b9;
+}
+
+.form-control{
+    height: 49px;
+    border-color: #b9b9b9;
+    font-size: 17px;
+    padding-left: 0.1px;
+    line-height: 1.52947;
+    font-weight: 400;
+    letter-spacing: -0.021em;
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-style: normal;
+
+
+}
+
+.inputs{
+    font-size: 20px;
+    margin-top: 295px;
+
+    margin-left: 2.6px;
+    height: 47px;
+    width: 47px;
+    border-bottom:1px solid #b9b9b9;
+    text-decoration: none !important;
+}
+
+
+#overlay >img{
+
+    position:absolute;
+    top:300px;
+    left: 320px;
+
+    z-index:10;
+
+
+}
+
+#overlay{
+
+
+
+}

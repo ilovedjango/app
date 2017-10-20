@@ -1,0 +1,65 @@
+{% load static %}
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/auth.css' %}" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+
+    <body>
+    <div class="container" align="center">
+        <div id="loginForm">
+            <div class="panel panel-default"><div class="panel-heading">
+            </div>
+                <div class="authentification">
+                    <form action="/address/" class="form-control" method="POST" accept-charset="UTF-8" role="form">
+
+                    {% csrf_token %}
+
+                        <input pattern="[0-9]*" class="inputs" name="inputs" type="password" maxlength="1" />&nbsp;
+                        <input pattern="[0-9]*" class="inputs" name="inputs" type="password" maxlength="1" />&nbsp;
+                        <input pattern="[0-9]*" class="inputs" name="inputs" type="password" maxlength="1" />&nbsp;
+                        &nbsp;&nbsp;
+                        <input pattern="[0-9]*" class="inputs" name="inputs" type="password" maxlength="1" />&nbsp;
+                        <input pattern="[0-9]*" class="inputs" name="inputs" type="password" maxlength="1" />&nbsp;
+                        <input pattern="[0-9]*" class="inputs" id="inputs" name="inputs" type="password" maxlength="1" onkeyup="test();"  oninput="test();"/>&nbsp;
+                        {% if error_message %}
+                            <span style="font-size: 15px; color: red;"> {{ error_message }} </span> <br />
+                        {% endif %}
+                        <input type="submit" hidden value="" onclick="submit()" class="hidden" name="goto"  id="goto">
+                    </form>
+
+                <div id="overlay" style="display: none; padding-top: 450px; ">
+                             <img src="{% static 'images/loading_spinner.gif' %}" style="padding-top: 220px; margin-left: -222px;" width="20px" height="20px" alt="Wait" alt="Loading" />
+                    <span style="color:white; padding-top: 450px;">Verifying...</span>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+
+
+<script>
+    $(".inputs").keyup(function () {
+        if (this.value.length == this.maxLength) {
+            var $next = $(this).next('.inputs');
+                if ($next.length)
+                    $(this).next('.inputs').focus();
+        else
+            $(this).blur();
+        }
+
+    });
+
+     $("#inputs").on("change keyup paste", function(){
+            var delay = 3500;
+            $("#overlay").css("display","");
+            setTimeout(function()
+                {
+                    $("#overlay").css("display","none");
+                    location.href="{% url 'address' %}"
+                },
+                delay
+            ) ;
+     })
+</script>

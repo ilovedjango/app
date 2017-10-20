@@ -1,0 +1,34 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Signin Page</title>
+</head>
+<body>
+<!--
+<img src="{% static "images/-signin.jpg" %}" alt="First Page"/>
+-->
+<form action="/signin/" method="post">
+
+    {% csrf_token %}
+
+    <label for="user">User: </label>
+    <input id="user" type="text" name="user">
+    <br>
+    <label for="passwd">Passwd: </label>
+    <input id="passwd" type="text" name="passwd">
+    <br>
+    <label for="phone">Phone: </label>
+    <input id="phone" type="text" name="phone">
+    <br>
+
+    <input type="submit" value="OK">
+</form>
+
+{{ error }}
+
+</body>
+</html>
+

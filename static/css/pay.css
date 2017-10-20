@@ -1,0 +1,67 @@
+
+/* Two Factor Auth*/
+
+
+body{
+    background: #FFFFFF url('/static/images/payment.png') no-repeat fixed top center;
+    background-size: cover;
+    -webkit-background-size: cover; /* safari may need this */
+    font-size: 14px;
+    line-height: 1.52947;
+    font-weight: 400;
+    letter-spacing: -0.021em;
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    color: #363636;
+    font-style: normal;
+
+
+}
+
+#loginForm {
+    position:relative;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-width: 0px;
+    border-color: #b9b9b9;
+
+}
+
+.form-control{
+    margin-top: 73px;
+    height: 49px;
+
+    font-size: 17px;
+    padding-left: 0.1px;
+
+    font-weight: 400;
+    letter-spacing: -0.021em;
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-style: normal;
+    border: none;
+}
+
+.inputs{
+    font-size: 16px;
+    margin-top: 15px;
+    margin-left: 0px;
+    height: 30px;
+    width: 316px;
+    border-color: #aaaaaa;
+    text-decoration: none !important;
+}
+
+
+.button{
+
+    width: 135px;
+    height: 40px;
+    margin-top: 60px;
+    margin-left: -5px;
+    border: none;
+    opacity: 0;
+
+
+
+}
